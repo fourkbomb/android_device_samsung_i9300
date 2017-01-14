@@ -94,6 +94,17 @@ on fs
     swapon_all /fstab.smdk4x12
 
 on boot
+
+service loggy /system/bin/sh /loggy.sh
+    class core
+    user root
+    oneshot
+
+service dmesgy /system/bin/sh /dmesg.sh
+    class core
+    user root
+    oneshot
+
 # modem boot
 service ipc-modem /system/bin/ipc-modem boot --debug
     class main
