@@ -30,6 +30,8 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/dmesg.sh:root/dmesg.sh \
     $(LOCAL_PATH)/rootdir/init.target.rc:root/init.target.rc
 
+ADDITIONAL_DEFAULT_PROPERTIES += ro.logd.kernel=false
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/m0
