@@ -1,9 +1,9 @@
 # Release name
-PRODUCT_RELEASE_NAME := i9300
+PRODUCT_RELEASE_NAME := trats2
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/smdk4412-common/common.mk)
-$(call inherit-product, device/samsung/i9300/i9300.mk)
+$(call inherit-product, device/samsung/exynos4412-common/common.mk)
+$(call inherit-product, device/samsung/trats2/device.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -16,8 +16,8 @@ TARGET_SCREEN_WIDTH := 720
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := i9300
-PRODUCT_NAME := lineage_i9300
+PRODUCT_DEVICE := trats2
+PRODUCT_NAME := lineage_trats2
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-I9300
 PRODUCT_MANUFACTURER := samsung

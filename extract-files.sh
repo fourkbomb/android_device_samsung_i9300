@@ -17,6 +17,6 @@
 set -e
 
 export VENDOR=samsung
-export DEVICE=i9300
+export DEVICE=trats2
 
-./../smdk4412-common/extract-files.sh $@
+./../exynos4412-common/extract-files.sh $@
