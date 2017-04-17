@@ -44,8 +44,7 @@ TARGET_KERNEL_APPEND_DTB := true
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 # Cache
-BOARD_CACHEIMAGE_PARTITION_SIZE := 1048576
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
+BOARD_CACHEIMAGE_PARTITION_SIZE := 10485760
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/trats2/rootdir/fstab.smdk4x12
@@ -59,6 +58,10 @@ TARGET_POWERHAL_VARIANT := pegasusq
 # Selinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/trats2/selinux
+
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 \
+	ro.sys.usb.configfs=1 \
+	ro.sys.usb.controller=12480000.hsotg
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := m0,i9300,GT-I9300,trats2
